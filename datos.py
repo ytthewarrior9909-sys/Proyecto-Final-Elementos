@@ -22,3 +22,18 @@ DEFENSA_ARQUERO = 10
 
 ORO_INICIAL = 100
 NIVEL_INICIAL = 1
+def cargar_aventureros():
+    archivo = open("aventureros.txt", "r")
+    for linea in archivo:
+        linea = linea.strip()
+        partes = linea.split(",")
+        nombres.append(partes[0])
+        clases.append(partes[1])
+        niveles.append(int(partes[2]))
+        vidas.append(int(partes[3]))
+        ataques.append(int(partes[4]))
+        defensas.append(int(partes[5]))
+        oros.append(int(partes[6]))
+        estados.append(partes[7])
+        inventarios.append(partes[8])
+    archivo.close()
