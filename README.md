@@ -2,8 +2,6 @@
 Repositorio para hacer cambios del proyecto final del laboratorio de elementos
 Pythonia RPG
 
-Proyecto final del laboratorio de Elementos de Computación, TEC San Carlos.
-
 Sistema de administración de aventureros RPG que corre completamente en consola, sin librerías externas ni interfaces gráficas.
 
 Cómo correr el proyecto
