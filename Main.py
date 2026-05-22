@@ -13,4 +13,4 @@ print("9. Ranking")
 print("0. Salir")
 print('====================================')\
 while opcion != 0:
-    
+    if opcion == 1:
