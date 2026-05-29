@@ -67,7 +67,7 @@ def ver_aventureros():
     return -1
 
 
-def consulte(nombres_consulta):
+def buscar_aventureros():
     i = 0
     while i < len(nombres):
         if nombres[i] == nombres_consulta:
@@ -76,7 +76,7 @@ def consulte(nombres_consulta):
     return -1
 
 
-def consulta_aventureros():
+def ver_aventureros():
     i = 0
     while i < len(nombres):
         print("Nombre: ", nombres[i])
@@ -89,6 +89,8 @@ def consulta_aventureros():
         print("Estado: ", estados[i])
         print("---------------------------------")
         i += 1
+def eliminar_aventureros():
+    nombre = input("Digite el nombre del aventurero que desea eliminar:")
 
 # Felipe lo tiene que completar
 # Tareas para Felipe:
