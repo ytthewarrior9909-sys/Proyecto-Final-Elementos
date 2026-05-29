@@ -65,7 +65,6 @@ def buscar_aventureros():
         i += 1
     return -1
 
-
 def ver_aventureros():
     i = 0
     while i < len(nombres):
@@ -81,19 +80,22 @@ def ver_aventureros():
         i += 1
 def eliminar_aventureros():
     nombre = input("Digite el nombre del aventurero que desea eliminar:")
-    buscar_aventureros()
-    if nombre == -1:
+    aventurero = buscar_aventureros(nombre)
+    if aventurero == -1:
         print("El  aventurero no existe")
         return
     else:
-        nombres.pop(po)
-        clases.pop(clase)
-        vidas.pop(vidas)
-        ataques.pop(ataques)
-        defensas.pop(defensas)
-        oros.pop(oros)
-        estados.pop(estados)
-        inventarios.pop(inventarios)
+        nombres.pop(aventurero)
+        clases.pop(aventurero)
+        vidas.pop(aventurero)
+        ataques.pop(aventurero)
+        defensas.pop(aventurero)
+        oros.pop(aventurero)
+        estados.pop(aventurero)
+        inventarios.pop(aventurero)
+        niveles.pop(aventurero)
+        guardar_aventureros()
+
 # Felipe lo tiene que completar
 # Tareas para Felipe:
 # completar ver_aventureros
