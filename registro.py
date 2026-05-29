@@ -4,6 +4,7 @@ from datos import VIDA_MAGO, ATAQUE_MAGO, DEFENSA_MAGO
 from datos import VIDA_ARQUERO, ATAQUE_ARQUERO, DEFENSA_ARQUERO
 from datos import ORO_INICIAL, NIVEL_INICIAL
 
+
 def registro_aventurero():
     print('-------Registro de aventureros---------')
     nombre_aventurero1 = str(input("Digite el nombre del aventurero:"))
@@ -37,21 +38,26 @@ def registro_aventurero():
     oros.append(oro)
     estados.append("vivo")
     inventarios.append("")
-    #print(nombres)
-    #print('Su clase es', clases)
-    #print(nombre_aventurero1)
-    #print('Su vida inicial es de', vida)
-    #print('Su ataque inicial es de', ataque)
-    #print('Su defensa inicial es de', defensa)
-    #print('Su oro inicial es de', oro)
+    # print(nombres)
+    # print('Su clase es', clases)
+    # print(nombre_aventurero1)
+    # print('Su vida inicial es de', vida)
+    # print('Su ataque inicial es de', ataque)
+    # print('Su defensa inicial es de', defensa)
+    # print('Su oro inicial es de', oro)
+
+
 def guardar_aventureros():
     archivo = open('aventureros.txt', 'w')
     i = 0
     while i < len(nombres):
-        linea = nombres[i] + ',' + clases[i] + ',' + str(niveles[i]) + ',' + str(vidas[i]) + "," + str(ataques[i]) + "," + str(defensas[i]) + "," + str(oros[i]) + "," + estados[i] + "," + inventarios[i] + "\n"
+        linea = nombres[i] + ',' + clases[i] + ',' + str(niveles[i]) + ',' + str(vidas[i]) + "," + str(
+            ataques[i]) + "," + str(defensas[i]) + "," + str(oros[i]) + "," + estados[i] + "," + inventarios[i] + "\n"
         archivo.write(linea)
         i += 1
     archivo.close()
+
+
 def ver_aventureros():
     i = 0
     while i < len(nombres):
@@ -61,10 +67,31 @@ def ver_aventureros():
     return -1
 
 
+def consulte(nombres_consulta):
+    i = 0
+    while i < len(nombres):
+        if nombres[i] == nombres_consulta:
+            return i
+        i += 1
+    return -1
 
 
-#Felipe lo tiene que completar
-#Tareas para Felipe:
-#completar ver_aventureros
-#completar buscar aventurero
-#complet
+def consulta_aventureros():
+    i = 0
+    while i < len(nombres):
+        print("Nombre: ", nombres[i])
+        print("clase: ", clases[i])
+        print("Nivel: ", niveles[i])
+        print("vidas: ", vidas[i])
+        print("Ataque: ", ataques[i])
+        print("Defensa: ", defensas[i])
+        print("Oro: ", oros[i])
+        print("Estado: ", estados[i])
+        print("---------------------------------")
+        i += 1
+
+# Felipe lo tiene que completar
+# Tareas para Felipe:
+# completar ver_aventureros
+# completar buscar aventurero
+# complet
