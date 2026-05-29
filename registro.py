@@ -53,9 +53,16 @@ def guardar_aventureros():
         i += 1
     archivo.close()
 def ver_aventureros():
+    i = 0
+    while i < len(nombres):
+        if nombres[i] == nombres:
+            return i
+        i += 1
+    return -1
 
 
-def buscar_aventurero():
+
+
 #Felipe lo tiene que completar
 #Tareas para Felipe:
 #completar ver_aventureros
