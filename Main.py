@@ -4,6 +4,7 @@ from datos import cargar_aventureros
 from registro import ver_aventureros
 from registro import buscar_aventurero
 from registro import eliminar_aventurero
+from entrenamiento import entrenamiento_aventureros
 opcion = -1
 cargar_aventureros()
 while opcion != 0:
@@ -29,17 +30,19 @@ while opcion != 0:
         nombre = input('Ingrese el nombre del aventurero que desea buscar: ')
         buscar_aventurero(nombre)
     elif opcion == 4:
-        eliminar_aventurero()
+        entrenamiento_aventureros()
+    #    elif opcion == 4:
+
+    #    elif opcion == 5:
+
+    #    elif opcion == 6:
+
+    #    elif opcion == 7:
+
+    #    elif opcion == 8:
+
+    #    elif opcion == 9:
+
+    #    elif opcion == 0:
     else:
         print("Opción inválida.")
-#    elif opcion == 5:
-
-#    elif opcion == 6:
-
-#    elif opcion == 7:
-
-#    elif opcion == 8:
-
-#    elif opcion == 9:
-
-#    elif opcion == 0:

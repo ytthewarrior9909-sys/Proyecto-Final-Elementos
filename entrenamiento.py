@@ -1,10 +1,10 @@
-from registro import buscar_aventureros
+from registro import buscar_aventurero
 from datos import oros, nombres, ataques, defensas, vidas, niveles
-
+from registro import guardar_aventureros
 
 def entrenamiento_aventureros():
-    nombre_bus = input("Ingrese el nombre del aventureros: ")
-    busqueda = buscar_aventureros(nombre_bus)
+    nombre = input("Ingrese el nombre del aventureros: ")
+    busqueda = buscar_aventurero(nombre)
     if busqueda == -1:
         print('No existe el aventurero')
         return
@@ -23,6 +23,7 @@ def entrenamiento_aventureros():
             oros[busqueda] = oros[busqueda] - 10
             print('Su oro ahora es: ', oros[busqueda])
             print('su nuevo ataque es: ', ataques[busqueda])
+            guardar_aventureros()
         else:
             print('No tienes suficiente oro')
             return
@@ -33,6 +34,7 @@ def entrenamiento_aventureros():
             oros[busqueda] = oros[busqueda] - 10
             print('Su oro ahora es: ', oros[busqueda])
             print('su nueva defensa es: ', ataques[busqueda])
+            guardar_aventureros()
         else:
             print('No tienes suficiente oro')
             return
@@ -42,6 +44,7 @@ def entrenamiento_aventureros():
             oros[busqueda] = oros[busqueda] - 10
             print('Su oro ahora es: ', oros[busqueda])
             print('su nueva vida es: ', ataques[busqueda])
+            guardar_aventureros()
         else:
             print('No tienes suficiente oro')
             return
@@ -52,7 +55,7 @@ def entrenamiento_aventureros():
             vidas[busqueda] = vidas[busqueda] * 1,20
             niveles[busqueda] = niveles[busqueda] + 1
             oros[busqueda] = oros[busqueda] - 100
-
+            guardar_aventureros()
             print('Su oro ahora es: ', oros[busqueda])
             print('su nuevo nivel es: ', niveles[busqueda])
             print('su ataque y defensa subieron en 10%')

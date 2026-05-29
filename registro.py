@@ -11,7 +11,7 @@ def registro_aventurero():
     nombrev = 0
     while nombre == "" or nombrev != -1:
         nombre = input("Digite el nombre del aventurero:")
-        nombrev = buscar_aventurero(nombre)
+        nombrev = consulte(nombre)
         if nombre == "":
             print("No se aceptan nombres vacíos.")
         elif nombrev != -1:
@@ -56,12 +56,29 @@ def guardar_aventureros():
         i += 1
     archivo.close()
 
-def buscar_aventurero(nombre):
+def consulte(nombre):
     i = 0
     while i < len(nombres):
         if nombres[i] == nombre:
             return i
         i += 1
+    return -1
+def buscar_aventurero(nombre):
+    i = 0
+    while i < len(nombres):
+        if nombres[i] == nombre:
+            print(nombres[i])
+            print(clases[i])
+            print(niveles[i])
+            print(vidas[i])
+            print(ataques[i])
+            print(defensas[i])
+            print(oros[i])
+            print(estados[i])
+            print(inventarios[i])
+            return i
+        i += 1
+    print('El nombre no existe')
     return -1
 
 def ver_aventureros():
