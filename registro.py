@@ -54,13 +54,8 @@ def guardar_aventureros():
     archivo.close()
 def ver_aventureros():
 
-hola como estados
-print('hola')
 
-
-
-
-
+def buscar_aventurero():
 #Felipe lo tiene que completar
 #Tareas para Felipe:
 #completar ver_aventureros

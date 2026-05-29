@@ -1,5 +1,7 @@
-from registro import registro_aventurero, guardar_aventureros
+from registro import registro_aventurero, guardar_aventureros, buscar_aventureros
 from datos import cargar_aventureros
+from registro import ver_aventureros
+from registro import buscar_aventurero
 opcion = -1
 cargar_aventureros()
 while opcion != 0:
@@ -19,3 +21,21 @@ while opcion != 0:
     if opcion == 1:
         registro_aventurero()
         guardar_aventureros()
+
+    elif opcion == 2:
+        ver_aventureros()
+    elif opcion == 3:
+        buscar_aventurero()
+    elif opcion == 4:
+
+    elif opcion == 5:
+
+    elif opcion == 6:
+
+    elif opcion == 7:
+
+    elif opcion == 8:
+
+    elif opcion == 9:
+
+    elif opcion == 0:
