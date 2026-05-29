@@ -30,6 +30,8 @@ while opcion != 0:
         buscar_aventurero(nombre)
     elif opcion == 4:
         eliminar_aventurero()
+    else:
+        print("Opción inválida.")
 #    elif opcion == 5:
 
 #    elif opcion == 6:
