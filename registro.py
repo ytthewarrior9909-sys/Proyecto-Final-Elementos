@@ -57,20 +57,10 @@ def guardar_aventureros():
         i += 1
     archivo.close()
 
-
-def ver_aventureros():
-    i = 0
-    while i < len(nombres):
-        if nombres[i] == nombres:
-            return i
-        i += 1
-    return -1
-
-
 def buscar_aventureros():
     i = 0
     while i < len(nombres):
-        if nombres[i] == nombres_consulta:
+        if nombres[i] == nombre:
             return i
         i += 1
     return -1
@@ -91,7 +81,19 @@ def ver_aventureros():
         i += 1
 def eliminar_aventureros():
     nombre = input("Digite el nombre del aventurero que desea eliminar:")
-
+    buscar_aventureros()
+    if nombre == -1:
+        print("El  aventurero no existe")
+        return
+    else:
+        nombres.pop(po)
+        clases.pop(clase)
+        vidas.pop(vidas)
+        ataques.pop(ataques)
+        defensas.pop(defensas)
+        oros.pop(oros)
+        estados.pop(estados)
+        inventarios.pop(inventarios)
 # Felipe lo tiene que completar
 # Tareas para Felipe:
 # completar ver_aventureros
