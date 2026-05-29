@@ -1,1 +1,2 @@
-Juan,Mago,1,80,35,5,100,vivo,
+Juan,Guerrero,1,150,20,15,100,vivo,
+Carlos,Guerrero,1,150,20,15,100,vivo,

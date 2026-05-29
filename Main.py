@@ -1,9 +1,9 @@
-from registro import registro_aventurero, eliminar_aventureros
+from registro import registro_aventurero
 from registro import guardar_aventureros
 from datos import cargar_aventureros
-#from registro import ver_aventureros
-#from registro import buscar_aventurero
-from registro import eliminar_aventurero()
+from registro import ver_aventureros
+from registro import buscar_aventurero
+from registro import eliminar_aventurero
 opcion = -1
 cargar_aventureros()
 while opcion != 0:
@@ -25,10 +25,11 @@ while opcion != 0:
         guardar_aventureros()
     elif opcion == 2:
         ver_aventureros()
-#    elif opcion == 3:
-        buscar_aventurero()
+    elif opcion == 3:
+        nombre = input('Ingrese el nombre del aventurero que desea buscar: ')
+        buscar_aventurero(nombre)
     elif opcion == 4:
-        eliminar_aventureros()
+        eliminar_aventurero()
 #    elif opcion == 5:
 
 #    elif opcion == 6:

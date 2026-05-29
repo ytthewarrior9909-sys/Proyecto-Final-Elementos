@@ -7,12 +7,13 @@ from datos import ORO_INICIAL, NIVEL_INICIAL
 
 def registro_aventurero():
     print('-------Registro de aventureros---------')
-    nombre_aventurero1 = str(input("Digite el nombre del aventurero:"))
+    nombre = str(input("Digite el nombre del aventurero:"))
     print('Las clases disponibles son:')
     print('Si desea escoger Guerrero digite 1:')
     print('Si desea escoger Mago digite 2:')
     print('Si desea escoger Arquero digite 3:')
     clase_aventurero1 = int(input("Digite la clase deseada de su aventurero:"))
+    
     if clase_aventurero1 == 1:
         clase = "Guerrero"
         vida = VIDA_GUERRERO
@@ -29,7 +30,7 @@ def registro_aventurero():
         ataque = ATAQUE_ARQUERO
         defensa = DEFENSA_ARQUERO
     oro = ORO_INICIAL
-    nombres.append(nombre_aventurero1)
+    nombres.append(nombre)
     clases.append(clase)
     niveles.append(NIVEL_INICIAL)
     vidas.append(vida)
@@ -57,7 +58,7 @@ def guardar_aventureros():
         i += 1
     archivo.close()
 
-def buscar_aventureros():
+def buscar_aventurero(nombre):
     i = 0
     while i < len(nombres):
         if nombres[i] == nombre:
@@ -78,7 +79,7 @@ def ver_aventureros():
         print("Estado: ", estados[i])
         print("---------------------------------")
         i += 1
-def eliminar_aventureros():
+def eliminar_aventurero():
     nombre = input("Digite el nombre del aventurero que desea eliminar:")
     aventurero = buscar_aventureros(nombre)
     if aventurero == -1:
