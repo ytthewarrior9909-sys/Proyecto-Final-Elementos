@@ -4,6 +4,14 @@ from datos import VIDA_MAGO, ATAQUE_MAGO, DEFENSA_MAGO
 from datos import VIDA_ARQUERO, ATAQUE_ARQUERO, DEFENSA_ARQUERO
 from datos import ORO_INICIAL, NIVEL_INICIAL
 
+#def submenu_registro():
+    #print ('-------Registro de aventureros---------')
+    #print('Para registrar aventureros digite 1')
+    #print('Para eliminar avent')
+
+
+
+
 
 def registro_aventurero():
     print('-------Registro de aventureros---------')
@@ -11,6 +19,7 @@ def registro_aventurero():
     nombrev = 0
     while nombre == "" or nombrev != -1:
         nombre = input("Digite el nombre del aventurero:")
+        nombre = nombre.strip()
         nombrev = consulte(nombre)
         if nombre == "":
             print("No se aceptan nombres vacíos.")
@@ -20,23 +29,33 @@ def registro_aventurero():
     print('Si desea escoger Guerrero digite 1:')
     print('Si desea escoger Mago digite 2:')
     print('Si desea escoger Arquero digite 3:')
-    clase_aventurero1 = int(input("Digite la clase deseada de su aventurero:"))
-    if clase_aventurero1 == 1:
-        clase = "Guerrero"
-        vida = VIDA_GUERRERO
-        ataque = ATAQUE_GUERRERO
-        defensa = DEFENSA_GUERRERO
-    elif clase_aventurero1 == 2:
-        clase = "Mago"
-        vida = VIDA_MAGO
-        ataque = ATAQUE_MAGO
-        defensa = DEFENSA_MAGO
-    elif clase_aventurero1 == 3:
-        clase = "Arquero"
-        vida = VIDA_ARQUERO
-        ataque = ATAQUE_ARQUERO
-        defensa = DEFENSA_ARQUERO
-    oro = ORO_INICIAL
+    while True:
+        try:
+            clase_aventurero = int(input("Digite la clase deseada de su aventurero:"))
+            if clase_aventurero == 1:
+                clase = "Guerrero"
+                vida = VIDA_GUERRERO
+                ataque = ATAQUE_GUERRERO
+                defensa = DEFENSA_GUERRERO
+                oro = ORO_INICIAL
+                break
+            elif clase_aventurero == 2:
+                clase = "Mago"
+                vida = VIDA_MAGO
+                ataque = ATAQUE_MAGO
+                defensa = DEFENSA_MAGO
+                oro = ORO_INICIAL
+                break
+            elif clase_aventurero == 3:
+                clase = "Arquero"
+                vida = VIDA_ARQUERO
+                ataque = ATAQUE_ARQUERO
+                defensa = DEFENSA_ARQUERO
+                oro = ORO_INICIAL
+                break
+            print ('Digite una clase valida')
+        except:
+            print('No puede digitar texto, por favor digite una opción válida:')
     nombres.append(nombre)
     clases.append(clase)
     niveles.append(NIVEL_INICIAL)
@@ -46,6 +65,7 @@ def registro_aventurero():
     oros.append(oro)
     estados.append("vivo")
     inventarios.append("")
+    guardar_aventureros()
 def guardar_aventureros():
     archivo = open('aventureros.txt', 'w')
     i = 0
@@ -82,18 +102,21 @@ def buscar_aventurero(nombre):
     return -1
 
 def ver_aventureros():
-    i = 0
-    while i < len(nombres):
-        print("Nombre: ", nombres[i])
-        print("clase: ", clases[i])
-        print("Nivel: ", niveles[i])
-        print("vidas: ", vidas[i])
-        print("Ataque: ", ataques[i])
-        print("Defensa: ", defensas[i])
-        print("Oro: ", oros[i])
-        print("Estado: ", estados[i])
-        print("---------------------------------")
-        i += 1
+    if len(nombres) == 0:
+        print('No existen aventureros')
+    else:
+        i = 0
+        while i < len(nombres):
+                print("Nombre: ", nombres[i])
+                print("clase: ", clases[i])
+                print("Nivel: ", niveles[i])
+                print("vidas: ", vidas[i])
+                print("Ataque: ", ataques[i])
+                print("Defensa: ", defensas[i])
+                print("Oro: ", oros[i])
+                print("Estado: ", estados[i])
+                print("---------------------------------")
+                i += 1
 def eliminar_aventurero():
     nombre = input("Digite el nombre del aventurero que desea eliminar:")
     aventurero = buscar_aventurero(nombre)
