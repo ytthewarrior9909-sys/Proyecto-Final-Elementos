@@ -87,18 +87,19 @@ def buscar_aventurero(nombre):
     i = 0
     while i < len(nombres):
         if nombres[i] == nombre:
-            print(nombres[i])
-            print(clases[i])
-            print(niveles[i])
-            print(vidas[i])
-            print(ataques[i])
-            print(defensas[i])
-            print(oros[i])
-            print(estados[i])
-            print(inventarios[i])
+            print('El nombre es: ', nombres[i])
+            print('La clase es:', clases[i])
+            print('El nivel es:', niveles[i])
+            print('Su vida es:', vidas[i])
+            print('Su ataque es:', ataques[i])
+            print('Su defensa es:', defensas[i])
+            print('Su oro es :', oros[i])
+            print('Su estado es:', estados[i])
+            print('Sus inventario es:', inventarios[i])
+            print('Su posicion en la lista es', i + 1)
             return i
         i += 1
-    print('El nombre no existe')
+    print('El aventurero no existe')
     return -1
 
 def ver_aventureros():

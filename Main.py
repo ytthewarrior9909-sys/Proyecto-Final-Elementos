@@ -25,7 +25,6 @@ while True:
             opcion = int(input('Digite la opcion deseada: '))
             if opcion == 1:
                 registro_aventurero()
-                guardar_aventureros()
             elif opcion == 2:
                 ver_aventureros()
             elif opcion == 3:
@@ -34,6 +33,7 @@ while True:
                 buscar_aventurero(nombre)
             elif opcion == 4:
                 entrenamiento_aventureros()
+
             elif opcion == 5:
                 eliminar_aventurero()
             #    elif opcion == 5:
